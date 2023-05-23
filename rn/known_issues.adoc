@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: rn/known_issues.html 
+keywords:  
+summary:  
+---
+= Problemi noti
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Si consiglia di esaminare tutti i problemi noti relativi alla release corrente relativi all'API REST di Astra Control. I problemi noti identificano i problemi che potrebbero impedire il corretto utilizzo del prodotto.
+
+
+
+== Non vengono rilevati tutti i dispositivi di storage in un nodo di storage back-end
+
+Quando si effettua una chiamata API REST per recuperare i dispositivi di storage definiti in un nodo di storage, vengono rilevati solo i dispositivi Astra Data Store. Non tutti i dispositivi vengono restituiti.
+
+
+
+== Back-end dello storage Astra Data Store `Unknown` stato
+
+Il backend dello storage Astra Data Store si trova in `Unknown` specificare dopo aver effettuato una chiamata API per recuperare il backend dello storage. In questa condizione, il backend dello storage è ancora disponibile e può essere comunicato con. Tuttavia, è probabile che un componente all'interno del backend dello storage si trovi in uno stato non integro e che debba essere riportato a uno stato integro affinché il backend dello storage venga visualizzato come `Available`.

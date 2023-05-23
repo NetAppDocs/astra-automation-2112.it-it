@@ -1,0 +1,78 @@
+---
+sidebar: sidebar 
+permalink: additional/security.html 
+keywords:  
+summary:  
+---
+= Sicurezza
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+L'API REST di Astra Control offre diversi livelli di sicurezza.
+
+
+NOTE: Tutto il traffico di rete HTTP viene protetto utilizzando lo standard del protocollo TLS (Transport Layer Security).
+
+
+
+== Token API Astra
+
+Per utilizzare l'API REST di Astra Control, è necessario fornire un token API per ogni richiesta in `Authorization` intestazione della richiesta. Tenere presente quanto segue:
+
+* È possibile generare un token API nell'interfaccia utente web Astra.
+* Un token non scade mai dopo la sua creazione.
+* È possibile revocare un token in qualsiasi momento dall'interfaccia utente web Astra.
+
+
+Vedere link:../get-started/get_api_token.html["Ottieni un token API"] per ulteriori informazioni.
+
+
+
+== Revoca di un token di accesso API
+
+È possibile revocare un token API all'interfaccia web Astra quando non è più necessario.
+
+.Prima di iniziare
+Hai bisogno di un account per il servizio Astra. È inoltre necessario identificare i token che si desidera revocare.
+
+.A proposito di questa attività
+Una volta revocato, il token risulta immediatamente e permanentemente inutilizzabile.
+
+.Fasi
+. Accedi ad Astra utilizzando le credenziali del tuo account.
++
+Accedere al seguente sito per Astra Control Service: https://astra.netapp.io/["https://astra.netapp.io"^]
+
+. Fare clic sull'icona a forma di figura nella parte superiore destra della pagina e selezionare *API access*.
+. Selezionare il token o i token che si desidera revocare.
+. Nella casella di riepilogo *azioni*, fare clic su *revoca token*.
+
+
+
+
+== Ruoli e controllo degli accessi
+
+Ogni utente Astra viene assegnato a un singolo ruolo che determina le azioni che possono essere eseguite. I ruoli sono organizzati in una gerarchia come descritto nella tabella seguente.
+
+[cols="15,85"]
+|===
+| Ruolo | Descrizione 
+
+
+| Proprietario | Dispone di tutte le autorizzazioni del ruolo Admin e può anche eliminare gli account Astra. 
+
+
+| Amministratore | Dispone di tutte le autorizzazioni del ruolo membro e può anche invitare gli utenti a unirsi a un account. 
+
+
+| Membro | È in grado di gestire completamente l'applicazione Astra e le risorse di calcolo. 
+
+
+| Visualizzatore | Limitato solo alla visualizzazione delle risorse. 
+|===
