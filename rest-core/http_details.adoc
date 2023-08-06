@@ -130,7 +130,7 @@ I seguenti parametri di query sono disponibili per l'utilizzo con le raccolte di
 I codici di stato HTTP utilizzati dall'API REST di Astra Control sono descritti di seguito.
 
 
-NOTE: L'API REST di Astra Control utilizza anche lo standard *Problem Details for HTTP API*. Vedere link:diagnostics_support.html["Diagnostica e supporto"] per ulteriori informazioni.
+NOTE: L'API REST di Astra Control utilizza anche lo standard *Problem Details for HTTP API*. Vedere link:../additional/diagnostics_support.html["Diagnostica e supporto"] per ulteriori informazioni.
 
 [cols="15,20,65"]
 |===
